@@ -1,0 +1,27 @@
+ALGORITHM print_name
+VAR
+    sentence : STRING : "The name of the student is phemmypedro"
+    setLen : INTEGER : 0
+    wordLen : INTEGER : 0
+    vowelen : INTEGER : 0
+    vowels : STRING : "aeiou"
+BEGIN
+     For i FROM 0 To sentence.length STEP 1 Do 
+     if (sentence[i] == " ") THEN
+        setLen = setLen
+        wordLen += 1
+     ELSE
+        setLen =+ 1
+     END_IF   
+
+     END_FOR
+
+     FOR i FROM 0 TO sentence.length STEP 1 Do
+         FOR k FROM 0 TO vowels.length STEP 2 Do
+             IF (sentence[i] == vowels[k]) THEN
+                 vowelen += 1
+             END_IF
+        END_FOR  
+    END_FOR 
+END    
+
